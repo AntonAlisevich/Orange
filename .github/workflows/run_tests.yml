@@ -9,8 +9,6 @@ on:
         default: second_test
         type: choice
         options:
-          - first_test
-          - second_test
           - all
 
 permissions:
@@ -27,7 +25,7 @@ jobs:
       - name: setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10"
+          python-version: "3.12"
       - run: >
           ARTIFACT_ID=$(curl -L 
           -H "Accept: application/vnd.github+json" 
