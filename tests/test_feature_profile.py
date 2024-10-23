@@ -13,8 +13,8 @@ class TestProfileFeature(BaseTest):
     @pytest.mark.smoke
     def test_change_profile_name(self):
         self.login_page.open()
-        self.login_page.enter_login(self.data.LOGIN)
-        self.login_page.enter_password(self.data.PASSWORD)
+        self.login_page.enter_login("Admin")
+        self.login_page.enter_password("admin123")
         self.login_page.click_login_button()
         self.dashboard_page.click_my_info_button()
         self.personal_page.is_opened()
