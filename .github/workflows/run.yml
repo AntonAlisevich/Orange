@@ -32,6 +32,9 @@ jobs:
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v3
       - name: all
+        env:
+          LOGIN: ${{ secrets.LOGIN }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: pytest --alluredir=allure-results
         continue-on-error: true
       - name: Store allure results
